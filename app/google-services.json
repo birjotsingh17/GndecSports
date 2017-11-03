@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "944888067562",
+    "firebase_url": "https://gndec-f9224.firebaseio.com",
+    "project_id": "gndec-f9224",
+    "storage_bucket": "gndec-f9224.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944888067562:android:8eb81df39cdf24d3",
+        "android_client_info": {
+          "package_name": "com.birjot.gndec_sports"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "944888067562-jde68stk7g62qaqjlctvlk1pjg78tc7g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4NSmMNRXSjgBtn2UT1Pndz2XTkluqq8o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
