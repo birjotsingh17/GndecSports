@@ -149,8 +149,8 @@ public class SignUpActivity extends Progressdialog {
 
     public void dbRegister(FirebaseUser fuser){
         User user = new User(
-                usernameFromEmail(email.getText().toString().trim()),
                 university.getText().toString().trim(),
+                usernameFromEmail(email.getText().toString().trim()),
                 email.getText().toString().trim(),
                 password.getText().toString().trim(),
                 ph.getText().toString().trim(),

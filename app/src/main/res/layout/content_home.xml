@@ -8,4 +8,14 @@
     tools:context="com.birjot.gndec_sports.Activities.HomeActivity"
     tools:showIn="@layout/app_bar_home">
 
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+
 </android.support.constraint.ConstraintLayout>

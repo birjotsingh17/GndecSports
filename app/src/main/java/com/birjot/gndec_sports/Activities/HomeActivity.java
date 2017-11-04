@@ -1,5 +1,9 @@
 package com.birjot.gndec_sports.Activities;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,9 +18,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.birjot.gndec_sports.R;
+import com.google.firebase.auth.FirebaseAuth;
 
-public class HomeActivity extends AppCompatActivity
+import java.io.File;
+
+public class HomeActivity extends Progressdialog
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    public ProgressDialog mProgressDialog;
+
+
+    boolean doubleBackToExitPressedOnce = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +69,15 @@ public class HomeActivity extends AppCompatActivity
     }
 
     @Override
+    protected void onDestroy() {
+
+        finish();
+        System.exit(0);
+        super.onDestroy();
+
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
@@ -72,6 +95,14 @@ public class HomeActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             return true;
         }
+        if (id == R.id.action_logout) {
+
+
+            showProgressDialog();
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(HomeActivity.this, SigninActivity.class));
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -82,7 +113,7 @@ public class HomeActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.intro) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
@@ -91,6 +122,21 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
+
+            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem menuItem) {
+                    ApplicationInfo applicationInfo = getApplicationContext().getApplicationInfo();
+                    String apkPath = applicationInfo.sourceDir;
+                    Intent intent = new Intent(Intent.ACTION_SEND);
+                    intent.setType("application/vnd.android.package-archieve");
+                    intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(apkPath)));
+                    startActivity(Intent.createChooser(intent, "Share App Using"));
+
+                    return false;
+                }
+            });
+
 
         } else if (id == R.id.nav_send) {
 
