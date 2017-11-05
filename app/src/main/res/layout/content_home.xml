@@ -9,12 +9,16 @@
     tools:showIn="@layout/app_bar_home">
 
 
+
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="0dp">
 
     </FrameLayout>
+
 
 
 
