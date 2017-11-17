@@ -1,19 +1,18 @@
-package com.birjot.gndec_sports_admin.Fragments;
+package com.birjot.gndec_sports.Fragments;
 
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.birjot.gndec_sports_admin.Model.GamesAdapter;
-import com.birjot.gndec_sports_admin.Model.GamesModel;
-import com.birjot.gndec_sports_admin.R;
+import com.birjot.gndec_sports.Model.GamesAdapter;
+import com.birjot.gndec_sports.Model.GamesModel;
+import com.birjot.gndec_sports.R;
 
 import java.util.ArrayList;
 

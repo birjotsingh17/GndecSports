@@ -22,6 +22,15 @@
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activities.adminhome"></activity>
+        <activity
+            android:name=".Games_Activities.BasketBall"
+            android:label="@string/title_activity_basket_ball"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Games_Activities.FootBall"
+            android:label="@string/title_activity_foot_ball"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
+
 
 </manifest>
