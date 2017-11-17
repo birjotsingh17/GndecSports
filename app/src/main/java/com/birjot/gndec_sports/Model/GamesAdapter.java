@@ -1,28 +1,22 @@
-package com.birjot.gndec_sports_admin.Model;
+package com.birjot.gndec_sports.Model;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.birjot.gndec_sports_admin.Activities.Graphs;
-import com.birjot.gndec_sports_admin.Activities.SignUpActivity;
-import com.birjot.gndec_sports_admin.Fragments.Games;
-import com.birjot.gndec_sports_admin.R;
+//import com.birjot.gndec_sports.Activities.Graphs;
+import com.birjot.gndec_sports.Activities.SignUpActivity;
+import com.birjot.gndec_sports.Games_Activities.BasketBall;
+import com.birjot.gndec_sports.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by birjot on 13/11/17.
@@ -81,30 +75,30 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
 
                 switch (position) {
                     case 0:
-                        Intent intent = new Intent(context, Graphs.class);
+                        Intent intent = new Intent(context, BasketBall.class);
                         context.startActivity(intent);
 
                         break;
                     case 1:
-                        Intent intent1 = new Intent(context, Graphs.class);
+                        Intent intent1 = new Intent(context, BasketBall.class);
                         context.startActivity(intent1);
 
                         break;
 
                     case 2:
-                        Intent intent2 = new Intent(context, Graphs.class);
+                        Intent intent2 = new Intent(context, BasketBall.class);
                         context.startActivity(intent2);
 
                         break;
 
                     case 3:
-                        Intent intent3 = new Intent(context, Graphs.class);
+                        Intent intent3 = new Intent(context, BasketBall.class);
                         context.startActivity(intent3);
 
                         break;
 
                     case 4:
-                        Intent intent4 = new Intent(context, Graphs.class);
+                        Intent intent4 = new Intent(context, BasketBall.class);
                         context.startActivity(intent4);
 
                         break;

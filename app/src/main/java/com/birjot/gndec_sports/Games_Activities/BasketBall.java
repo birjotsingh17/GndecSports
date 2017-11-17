@@ -1,13 +1,10 @@
-package com.birjot.gndec_sports_admin.Games_Activities;
+package com.birjot.gndec_sports.Games_Activities;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
-import com.birjot.gndec_sports_admin.R;
+import com.birjot.gndec_sports.R;
 
 public class BasketBall extends AppCompatActivity {
 
