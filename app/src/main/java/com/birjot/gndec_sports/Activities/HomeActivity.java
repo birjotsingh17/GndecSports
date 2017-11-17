@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -18,7 +19,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.birjot.gndec_sports.Fragments.Games;
 import com.birjot.gndec_sports.Fragments.intro1;
 import com.birjot.gndec_sports.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -63,12 +66,28 @@ public class HomeActivity extends Progressdialog
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+       /* DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+        }*/
+
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
         }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 
     @Override
@@ -107,6 +126,7 @@ public class HomeActivity extends Progressdialog
             return true;
         }
 
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -126,9 +146,9 @@ public class HomeActivity extends Progressdialog
 
         } else*/ if (id == R.id.nav_share) {
 
-            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            /*item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
-                public boolean onMenuItemClick(MenuItem menuItem) {
+                public boolean onMenuItemClick(MenuItem menuItem) {*/
                     ApplicationInfo applicationInfo = getApplicationContext().getApplicationInfo();
                     String apkPath = applicationInfo.sourceDir;
                     Intent intent = new Intent(Intent.ACTION_SEND);
@@ -136,9 +156,9 @@ public class HomeActivity extends Progressdialog
                     intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(apkPath)));
                     startActivity(Intent.createChooser(intent, "Share App Using"));
 
-                    return false;
-                }
-            });
+                  /*  return false;
+                }*/
+           /* });*/
 
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
@@ -167,6 +187,9 @@ public class HomeActivity extends Progressdialog
         switch (itemId) {
             case R.id.intro1:
                 fragment = new intro1();
+                break;
+            case R.id.nav_manage:
+                fragment = new Games();
                 break;
             /*case R.id.nav_menu2:
                 fragment = new Menu2();

@@ -10,9 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.birjot.gndec_sports_admin.Model.GamesAdapter;
-import com.birjot.gndec_sports_admin.Model.GamesModel;
-import com.birjot.gndec_sports_admin.R;
+import com.birjot.gndec_sports.Model.GamesAdapter;
+import com.birjot.gndec_sports.Model.GamesModel;
+import com.birjot.gndec_sports.R;
 
 import java.util.ArrayList;
 
