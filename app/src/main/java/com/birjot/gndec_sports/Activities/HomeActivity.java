@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.birjot.gndec_sports.Fragments.Games;
 import com.birjot.gndec_sports.Fragments.intro1;
+import com.birjot.gndec_sports.Fragments.posts;
 import com.birjot.gndec_sports.R;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -187,6 +188,9 @@ public class HomeActivity extends Progressdialog
         switch (itemId) {
             case R.id.intro1:
                 fragment = new intro1();
+                break;
+            case R.id.viewposts:
+                fragment = new posts();
                 break;
             case R.id.nav_manage:
                 fragment = new Games();
