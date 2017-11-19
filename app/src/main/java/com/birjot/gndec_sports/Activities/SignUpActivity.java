@@ -1,8 +1,10 @@
 package com.birjot.gndec_sports.Activities;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -19,6 +21,7 @@ import com.birjot.gndec_sports.Model.User;
 import com.birjot.gndec_sports.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -124,27 +127,52 @@ public class SignUpActivity extends Progressdialog {
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                // Sign in success, update UI with the signed-in user's information
-                                Log.d(TAG, "createUserWithEmail:success");
-                                dbRegister(task.getResult().getUser());
-                                updateUI(task.getResult().getUser());
-                            } else {
-                                // If sign in fails, display a message to the user.
-                                Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                                Toast.makeText(SignUpActivity.this, ""+task.getException().getMessage(),
-                                        Toast.LENGTH_LONG).show();
-                            }
-
-                            // [START_EXCLUDE]
                             hideProgressDialog();
                             // [END_EXCLUDE]
+                            if (!task.isSuccessful()){
+                                try {
+                                    throw task.getException();
+                                } catch (FirebaseNetworkException e) {
+                                    Toast.makeText(SignUpActivity.this, "Check your internet connection",Toast.LENGTH_SHORT).show();
+                                } catch (Exception e) {
+                                    Toast.makeText(SignUpActivity.this, ""+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                                }
+                            } else {
+                                Log.d(TAG, "createUserWithEmail:success");
+                                dbRegister(task.getResult().getUser());
+                                sendVerificationEmail();
+                            }
                         }
                     });
 
         }else{
             Toast.makeText(SignUpActivity.this, "Please fill all fields correctly", Toast.LENGTH_SHORT).show();
         }
+    }
+    public void sendVerificationEmail(){
+        FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+        user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()){
+                    checkEmailDialog();
+                }
+            }
+        });
+    }
+
+    private void checkEmailDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setMessage("Check your Email for verification");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                startActivity(new Intent(getApplicationContext(), SigninActivity.class));
+                finish();
+            }
+        });
+        builder.create().show();
     }
 
     public void dbRegister(FirebaseUser fuser){
@@ -194,13 +222,13 @@ public class SignUpActivity extends Progressdialog {
         return gender;
     }
 
-    public void updateUI(FirebaseUser user){
-        hideProgressDialog();
-
-        if (user != null){
-            startActivity(new Intent(SignUpActivity.this, HomeActivity.class));
-        }
-    }
+//    public void updateUI(FirebaseUser user){
+//        hideProgressDialog();
+//
+//        if (user != null){
+//            startActivity(new Intent(SignUpActivity.this, HomeActivity.class));
+//        }
+//    }
 
     public boolean validateForm(){
         if(TextUtils.isEmpty(email.getText().toString().trim()) || !email.getText().toString().trim().contains("@") ){
