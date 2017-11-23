@@ -93,4 +93,17 @@
 
         />
 
+    <TextView
+        android:paddingTop="15dp"
+        android:id="@+id/resetpwd"
+        android:textColor="@color/colorPrimary"
+        android:clickable="true"
+        android:onClick="onreset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Forget Password"
+
+        />
+
 </LinearLayout>

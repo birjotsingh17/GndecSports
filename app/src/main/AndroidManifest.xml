@@ -23,7 +23,7 @@
             android:name=".Activities.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activities.adminhome"></activity>
+        <activity android:name=".Activities.adminhome" />
         <activity
             android:name=".Games_Activities.BasketBall"
             android:label="@string/title_activity_basket_ball"
@@ -31,8 +31,8 @@
         <activity
             android:name=".Games_Activities.FootBall"
             android:label="@string/title_activity_foot_ball"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.ResetActivity"></activity>
     </application>
-
 
 </manifest>

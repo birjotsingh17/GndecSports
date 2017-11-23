@@ -21,12 +21,16 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static android.R.attr.id;
+
 
 public class SigninActivity extends Progressdialog {
 
 
     EditText txtEmail,txtPassword;
     Button btnSignIn;
+
+    FirebaseAuth auth = FirebaseAuth.getInstance();
 
     private FirebaseAuth mAuth;
    /* private FirebaseAuth.AuthStateListener mAuthListener;
@@ -182,9 +186,18 @@ public class SigninActivity extends Progressdialog {
     }
 
     public void onclick(View view) {
-        startActivity(new Intent(SigninActivity.this, SignUpActivity.class));
+
+            startActivity(new Intent(SigninActivity.this, SignUpActivity.class));
+
+
     }
 
+    public void onreset(View view) {
+
+        startActivity(new Intent(SigninActivity.this, ResetActivity.class));
+
+
+    }
 
 /*
 
