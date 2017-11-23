@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -81,9 +82,18 @@ public class SigninActivity extends Progressdialog {
 
     protected void onStart(){
         super.onStart();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
+        FirebaseUser user = mAuth.getCurrentUser();
+       // updateUI(currentUser);
+        Log.i(getString(R.string.tag),user+"");
+        if(user != null){
+            if (user.isEmailVerified()){
+                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                //finish();
+            }
+        }
+
     }
+
 
 
     public void updateUI(FirebaseUser user){
@@ -130,8 +140,7 @@ public class SigninActivity extends Progressdialog {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
+                            checkIfEmailVerified();
                         } else {
                             Toast.makeText(SigninActivity.this, task.getException().getMessage(),
                                     Toast.LENGTH_LONG).show();
@@ -140,6 +149,19 @@ public class SigninActivity extends Progressdialog {
                         hideProgressDialog();
                     }
                 });
+    }
+    private void checkIfEmailVerified(){
+        FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null){
+            Log.d(getString(R.string.tag), "checkIfEmailVerified: user: "+user);
+            if (user.isEmailVerified()){
+                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                finish();
+            } else {
+                Toast.makeText(getApplicationContext(), "Email verification is not complete",Toast.LENGTH_LONG).show();
+            }
+        }
+
     }
 
 
