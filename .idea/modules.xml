@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GNDEC_sports.iml" filepath="$PROJECT_DIR$/GNDEC_sports.iml" />
       <module fileurl="file://$PROJECT_DIR$/GndecSports.iml" filepath="$PROJECT_DIR$/GndecSports.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
