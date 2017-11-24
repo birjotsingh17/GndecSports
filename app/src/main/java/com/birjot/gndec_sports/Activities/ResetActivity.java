@@ -1,5 +1,7 @@
 package com.birjot.gndec_sports.Activities;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +30,9 @@ public class ResetActivity extends Progressdialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         setContentView(R.layout.activity_reset);
 
 
@@ -86,8 +91,9 @@ public class ResetActivity extends Progressdialog {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Intent intent = new Intent(ResetActivity.this, SigninActivity.class);
-                            startActivity(intent);
+
+                            showDialog();
+
 
                             // do something when mail was sent successfully.
                         } else {
@@ -102,11 +108,33 @@ public class ResetActivity extends Progressdialog {
 
     }
 
-    public void backclick(View view){
-        Intent intent = new Intent(this, SigninActivity.class);
-        startActivity(intent);
+
+    void showDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Reset link sent to your email.");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                Intent intent = new Intent(ResetActivity.this, SigninActivity.class);
+                startActivity(intent);
+
+            }
+        });
+       /* builder.setNegativeButton("Cancel", null);*/
+        builder.create().show();
     }
 
+   /* public void backclick(View view){
+        Intent intent = new Intent(this, SigninActivity.class);
+        startActivity(intent);
+    }*/
 
+
+
+   public boolean onSupportNavigateUp(){
+       onBackPressed();
+       return true;
+   }
 
 }
