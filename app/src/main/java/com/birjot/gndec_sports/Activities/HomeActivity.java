@@ -23,7 +23,9 @@ import android.widget.Toast;
 
 import com.birjot.gndec_sports.Fragments.Games;
 import com.birjot.gndec_sports.Fragments.intro1;
+import com.birjot.gndec_sports.Fragments.introduction;
 import com.birjot.gndec_sports.Fragments.posts;
+import com.birjot.gndec_sports.Latest_News.lookforLastestnews;
 import com.birjot.gndec_sports.R;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -186,21 +188,33 @@ public class HomeActivity extends Progressdialog
 
         //initializing the fragment object which is selected
         switch (itemId) {
-            case R.id.intro1:
-                fragment = new intro1();
+            case R.id.introduction:
+                fragment = new introduction();
                 break;
             case R.id.viewposts:
                 fragment = new posts();
                 break;
-            case R.id.nav_manage:
+            case R.id.nav_facilities:
                 fragment = new Games();
                 break;
-            /*case R.id.nav_menu2:
-                fragment = new Menu2();
-                break;
-            case R.id.nav_menu3:
-                fragment = new Menu3();
+            /*case R.id.nav_records:
+                fragment = new Records();
                 break;*/
+            case R.id.latestnews:
+                fragment = new lookforLastestnews();
+                break;
+          /*  case R.id.nav_madeby:
+                Intent intent = new Intent(HomeActivity.this,Developers.class);
+                startActivity(intent);
+                break;*/
+
+            /*case R.id.nav_graph:
+                fragment = new GraphFragment();
+               *//* Intent intent = new Intent(HomeActivity.this,Graphs.class);
+                startActivity(intent);*//*
+                break;*/
+
+
         }
 
         //replacing the fragment
