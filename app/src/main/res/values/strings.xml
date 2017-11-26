@@ -220,4 +220,27 @@
     <string name="title_activity_basket_ball"> BASKETBALL </string>
 
 
+    <string name="introSports">
+    "    The Sports Department was established in 1956 with the aim to inculcate sports culture among staff and students of the college. Guided by Guru Nanak Dev Jis values and our commitment to diversity, we are leading sports department that inspires the student by fostering healthy lifestyles through involvement in physical education and sports activities that cultivate lifelong health.
+            Our institute prepares student to face rapidly changing world with confidence and a sense of responsibility to make the world a better place. To that end, the sports department views its interaction with students through physical education programmes that help them discover, develop and test their skills to create a positive change.
+            We provide adequate environment, infrastructure to persue sports activities and provide playing opportunities to the wide range of students regardless of the gender or cultural backgrounds. The department simultaneously prepare teams for inter-college and inter-varsity competition. Various tournaments / meet, intramural activity are organized throughout the session.
+     The campus intramural sports component strives to provide a variety of opportunities that contribute to and promote the six dimensions of wellness: physical, emotional, social, spiritual, intellectual and environmental. We are dedicated to make intramural part of campus life. Our goal is to continuously create and provide a competitive, safe and enjoyable atmosphere that encourages teamwork, leadership development as well as lifelong pattern of positive activity."
+    </string>
+
+    <string name="introvision">
+    Promoting the personal and professional development of student at par international standards through designing and implementing programs that support healthy lifestyles and academic success.
+    </string>
+
+    <string name="intromission">
+        "\u2022 To honor academic mission of the college by promoting general welfare of the students.
+\u2022 To promote physical activity and help individuals enhance their health, fitness and quality of life.
+\u2022 To develop state of art infrastructure of international standard.
+\u2022 To develop overall personality of the students with focus on core values like teamwork, respect, integrity, balance, humility, accountability, sportsmanship.
+\u2022 To inculcate moral, ethical and spiritual values through intramural and extramural activities.
+\u2022 To engage the mind, to elevate the spirit and stimulate the best effort of all who are associated with the college."
+
+        </string>
+    <string name="title_activity_delete">delete</string>
+    <string name="title_activity_made_by">MadeByActivity</string>
+
 </resources>
