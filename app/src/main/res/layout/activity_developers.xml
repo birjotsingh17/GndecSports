@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.birjot.gndec_sports_admin.Activities.Developers">
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/textViewtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Made with \u2764 by"
+        android:typeface="monospace"
+        android:textColor="@color/colorheadig"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textSize="25dp" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/DP1"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:src="@drawable/birjot"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewName1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:text="Birjot Singh" />
+
+            <TextView
+                android:id="@+id/textViewEmail1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="birjotsingh17@gmail.com" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/DP2"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:src="@drawable/birjot"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewName2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:text="Nikhil Sarna" />
+
+            <TextView
+                android:id="@+id/textViewEmail2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="nikhilsarna11@gmail.com" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

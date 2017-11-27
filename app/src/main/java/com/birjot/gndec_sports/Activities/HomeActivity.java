@@ -22,6 +22,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.birjot.gndec_sports.Fragments.Games;
+import com.birjot.gndec_sports.Fragments.GraphFragment;
+import com.birjot.gndec_sports.Fragments.Records;
 import com.birjot.gndec_sports.Fragments.intro1;
 import com.birjot.gndec_sports.Fragments.introduction;
 import com.birjot.gndec_sports.Fragments.posts;
@@ -47,6 +49,8 @@ public class HomeActivity extends Progressdialog
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        displaySelectedScreen(R.id.introduction);
 
        /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -197,22 +201,22 @@ public class HomeActivity extends Progressdialog
             case R.id.nav_facilities:
                 fragment = new Games();
                 break;
-            /*case R.id.nav_records:
+            case R.id.nav_records:
                 fragment = new Records();
-                break;*/
+                break;
             case R.id.latestnews:
                 fragment = new lookforLastestnews();
                 break;
-          /*  case R.id.nav_madeby:
+            case R.id.nav_madeby:
                 Intent intent = new Intent(HomeActivity.this,Developers.class);
                 startActivity(intent);
-                break;*/
+                break;
 
-            /*case R.id.nav_graph:
+            case R.id.nav_graph:
                 fragment = new GraphFragment();
-               *//* Intent intent = new Intent(HomeActivity.this,Graphs.class);
-                startActivity(intent);*//*
-                break;*/
+               /* Intent intent = new Intent(HomeActivity.this,Graphs.class);
+                startActivity(intent);*/
+                break;
 
 
         }
