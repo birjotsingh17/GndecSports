@@ -1,0 +1,51 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.birjot.gndec_sports_admin.Fragments.GraphFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="PARTICIPATION IN 2017"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:padding="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="324dp"
+        android:layout_height="271dp"
+        app:srcCompat="@drawable/aa"
+        android:layout_marginTop="-17dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
+</ScrollView>

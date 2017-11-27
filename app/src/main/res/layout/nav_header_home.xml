@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
     android:background="@drawable/side_nav_bar"
@@ -10,26 +11,38 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:weightSum="1">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="79dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
+        app:srcCompat="@drawable/photo6104773795236653005"
+        android:layout_weight="1.06"
+        android:layout_marginLeft="-9dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.507" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="116dp"
+        android:layout_height="41dp"
+
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="Android Studio"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:text="GNDEC SPORTS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintLeft_toRightOf="@+id/imageView"
+        android:layout_marginLeft="18dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.601" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="android.studio@android.com" />
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
