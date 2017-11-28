@@ -11,10 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.SigninActivity">
+        <activity android:name=".Activities.SigninActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
 
         </activity>
-        <activity android:name=".Activities.SignUpActivity" />
+        <activity android:name=".Activities.SignUpActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            </activity>
         <activity
             android:name=".Activities.HomeActivity"
             android:label="@string/title_activity_home"
@@ -28,7 +31,9 @@
             android:name=".Games_Activities.FootBall"
             android:label="@string/title_activity_foot_ball"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activities.ResetActivity"></activity>
+        <activity android:name=".Activities.ResetActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+        </activity>
 
         <activity android:name=".Activities.SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">

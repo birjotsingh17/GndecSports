@@ -1,35 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.birjot.gndec_sports.Activities.SignUpActivity">
+
 
 
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="15dp"
+        android:background="@drawable/signup"
+        tools:context="com.birjot.gndec_sports.Activities.SignUpActivity">
 
-        <ImageView android:src="@drawable/myicon"
+       <!-- <ImageView android:src="@drawable/myicon"
             android:layout_width="wrap_content"
             android:layout_height="72dp"
             android:layout_marginTop="24dp"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal" />-->
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All the fields are mandatory"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:paddingTop="100dp"
+            android:textColor="@color/white"
+            android:id="@+id/textViewSignIn"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="8dp">
 
             <EditText android:id="@+id/university"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:textColor="@color/white"
                 android:hint="University Roll Number" />
         </android.support.design.widget.TextInputLayout>
 
@@ -43,6 +64,7 @@
             <EditText android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:inputType="textEmailAddress"
                 android:hint="Email" />
         </android.support.design.widget.TextInputLayout>
@@ -58,6 +80,7 @@
             <EditText android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:inputType="textPassword"
                 android:hint="Password"/>
         </android.support.design.widget.TextInputLayout>
@@ -75,6 +98,7 @@
                 android:id="@+id/ph"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:inputType="number"
                 android:hint="PhoneNumber"/>
 
@@ -96,6 +120,7 @@
                 android:id="@+id/gender_textview"
                 android:paddingRight="15dp"
                 android:text="@string/hint_gender"
+                android:textColor="@color/white"
                 android:fontFeatureSettings="@string/hint_password"
                 android:textSize="20dp"
                 android:fontFamily="@string/hint_password"
@@ -113,12 +138,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/male"
+                    android:textColor="@color/white"
+                    android:buttonTint="@color/white"
                     />
                 <RadioButton
 
                     android:id="@+id/female_radio_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/white"
+                    android:textColor="@color/white"
                     android:text = "@string/female"
                     />
             </RadioGroup>
@@ -135,6 +164,7 @@
             android:id="@+id/ac_city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:hint="City"
             android:layout_marginTop="28dp"
             />
@@ -148,9 +178,10 @@
             android:text="Register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        </LinearLayout>
 
+
+    </ScrollView>
     </LinearLayout>
 
-
-</ScrollView>
 

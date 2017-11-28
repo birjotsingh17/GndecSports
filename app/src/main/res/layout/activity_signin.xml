@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/signin1"
     tools:context="com.birjot.gndec_sports.Activities.SigninActivity">
+<!--
 
     <ImageView
         android:id="@+id/imageView"
@@ -21,6 +23,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/myicon" />
+-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,6 +31,8 @@
         android:text="Please SignIn to continue"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:paddingTop="120dp"
+        android:textColor="@color/white"
         android:id="@+id/textViewSignIn"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"/>
@@ -35,8 +40,8 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp">
 
@@ -46,6 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:textColor="@color/colortable"
             android:ems="10"
             android:inputType="textEmailAddress"
             android:hint="Email" />
@@ -55,8 +61,8 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp">
 
@@ -75,7 +81,7 @@
         android:id="@+id/ButtonSignIn"
         android:layout_width="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:text="sign in" />
 
@@ -83,8 +89,9 @@
     <TextView
         android:paddingTop="25dp"
         android:id="@+id/textViewHere"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/white"
         android:clickable="true"
+        android:textStyle="bold"
         android:onClick="onclick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -96,14 +103,45 @@
     <TextView
         android:paddingTop="15dp"
         android:id="@+id/resetpwd"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/white"
         android:clickable="true"
         android:onClick="onreset"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Forget Password"
 
         />
+
+  <!--  <TextView
+
+
+        android:textStyle="bold"
+        android:id="@+id/textViewHere"
+        android:textColor="@color/white"
+        android:clickable="true"
+        android:onClick="onclick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="220dp"
+        android:text="New User"
+
+        />
+
+    <TextView
+        android:paddingTop="15dp"
+        android:id="@+id/resetpwd"
+        android:textColor="@color/white"
+        android:clickable="true"
+        android:onClick="onreset"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="200dp"
+        android:text="Forget Password"
+
+
+        />-->
 
 </LinearLayout>
