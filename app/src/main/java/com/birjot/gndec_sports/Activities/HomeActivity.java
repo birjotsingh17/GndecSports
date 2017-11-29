@@ -26,6 +26,7 @@ import com.birjot.gndec_sports.Fragments.GraphFragment;
 import com.birjot.gndec_sports.Fragments.Records;
 import com.birjot.gndec_sports.Fragments.intro1;
 import com.birjot.gndec_sports.Fragments.introduction;
+import com.birjot.gndec_sports.Fragments.lookformeetnews;
 import com.birjot.gndec_sports.Fragments.posts;
 import com.birjot.gndec_sports.Latest_News.lookforLastestnews;
 import com.birjot.gndec_sports.R;
@@ -130,6 +131,7 @@ public class HomeActivity extends Progressdialog
             showProgressDialog();
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(HomeActivity.this, SigninActivity.class));
+            finish();
             return true;
         }
 
@@ -206,6 +208,9 @@ public class HomeActivity extends Progressdialog
                 break;
             case R.id.latestnews:
                 fragment = new lookforLastestnews();
+                break;
+            case R.id.latestmeetnews:
+                fragment = new lookformeetnews();
                 break;
             case R.id.nav_madeby:
                 Intent intent = new Intent(HomeActivity.this,Developers.class);

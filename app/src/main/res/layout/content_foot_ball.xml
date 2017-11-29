@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.birjot.gndec_sports_admin.Games_Activities.FootBall"
+    tools:context="com.birjot.gndec_sports.Games_Activities.FootBall"
     tools:showIn="@layout/activity_foot_ball">
 
 </android.support.constraint.ConstraintLayout>

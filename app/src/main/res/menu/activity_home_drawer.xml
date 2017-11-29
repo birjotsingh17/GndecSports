@@ -14,6 +14,11 @@
         android:id="@+id/latestnews"
         android:icon="@drawable/ic_menu_camera"
         android:title="LATEST NEWS" />
+
+        <item
+            android:id="@+id/latestmeetnews"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="LATEST MEET NEWS" />
     <item
         android:id="@+id/viewposts"
         android:icon="@drawable/ic_menu_camera"

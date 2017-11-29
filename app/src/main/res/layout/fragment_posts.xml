@@ -13,7 +13,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:id="@+id/activity_show_images"
-    tools:context="com.birjot.gndec_sports_admin.Fragments.posts">
+    tools:context="com.birjot.gndec_sports.Fragments.posts">
 
 
     <android.support.v7.widget.RecyclerView
