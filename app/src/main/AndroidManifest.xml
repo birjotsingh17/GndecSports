@@ -35,6 +35,8 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
         </activity>
 
+        <activity android:name=".Activities.Developers" />
+
         <activity android:name=".Activities.SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
             <intent-filter>
@@ -46,6 +48,8 @@
         </activity>
 
         <activity android:name=".Activities.Athletics" />
+
+        <activity android:name=".Activities.ContactUs"></activity>
     </application>
 
 </manifest>
