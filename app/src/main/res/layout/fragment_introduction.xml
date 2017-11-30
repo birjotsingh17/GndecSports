@@ -9,7 +9,7 @@
     <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.birjot.gndec_sports_admin.Fragments.introduction"
+    tools:context="com.birjot.gndec_sports.Fragments.introduction"
         android:paddingTop="8dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"

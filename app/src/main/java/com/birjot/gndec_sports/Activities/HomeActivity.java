@@ -6,16 +6,12 @@ import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,10 +20,10 @@ import android.widget.Toast;
 import com.birjot.gndec_sports.Fragments.Games;
 import com.birjot.gndec_sports.Fragments.GraphFragment;
 import com.birjot.gndec_sports.Fragments.Records;
-import com.birjot.gndec_sports.Fragments.intro1;
 import com.birjot.gndec_sports.Fragments.introduction;
+import com.birjot.gndec_sports.Fragments.lookformeetnews;
 import com.birjot.gndec_sports.Fragments.posts;
-import com.birjot.gndec_sports.Latest_News.lookforLastestnews;
+import com.birjot.gndec_sports.Fragments.lookforLastestnews;
 import com.birjot.gndec_sports.R;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -130,6 +126,7 @@ public class HomeActivity extends Progressdialog
             showProgressDialog();
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(HomeActivity.this, SigninActivity.class));
+            finish();
             return true;
         }
 
@@ -201,9 +198,6 @@ public class HomeActivity extends Progressdialog
             case R.id.nav_facilities:
                 fragment = new Games();
                 break;
-            case R.id.nav_records:
-                fragment = new Records();
-                break;
             case R.id.latestnews:
                 fragment = new lookforLastestnews();
                 break;
@@ -211,7 +205,10 @@ public class HomeActivity extends Progressdialog
                 Intent intent = new Intent(HomeActivity.this,Developers.class);
                 startActivity(intent);
                 break;
-
+            case R.id.nav_athletics:
+                Intent intent5 = new Intent(HomeActivity.this,Athletics.class);
+                startActivity(intent5);
+                break;
             case R.id.nav_graph:
                 fragment = new GraphFragment();
                /* Intent intent = new Intent(HomeActivity.this,Graphs.class);
