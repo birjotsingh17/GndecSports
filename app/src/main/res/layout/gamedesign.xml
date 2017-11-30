@@ -34,15 +34,12 @@
             android:id="@+id/imageView4"
             android:layout_width="75dp"
             android:layout_height="69dp"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000"
-            android:layout_marginLeft="-30dp"
+            app:civ_border_width="4dp"
+            app:civ_border_color="@color/colorPrimary"
+            android:layout_marginLeft="2dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintVertical_bias="0.312" />
+            android:layout_marginTop="-9dp" />
 
 
         <TextView
@@ -55,9 +52,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="8dp"
             android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintLeft_toRightOf="@+id/imageView4"
             android:layout_marginLeft="32dp"
-            app:layout_constraintVertical_bias="0.638"
+            app:layout_constraintVertical_bias="0.492"
             android:paddingLeft="10dp"
             />
 

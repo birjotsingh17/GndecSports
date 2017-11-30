@@ -44,6 +44,8 @@
             </intent-filter>
 
         </activity>
+
+        <activity android:name=".Activities.Athletics" />
     </application>
 
 </manifest>

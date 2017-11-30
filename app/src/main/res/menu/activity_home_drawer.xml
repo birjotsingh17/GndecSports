@@ -2,47 +2,47 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-    <item
-        android:id="@+id/introduction"
-        android:icon="@drawable/ic_menu_camera"
-        android:title="INTRODUCTION" />
-    <item
-        android:id="@+id/nav_gallery"
-        android:icon="@drawable/ic_menu_gallery"
-        android:title="COMMITEE" />
-    <item
-        android:id="@+id/latestnews"
-        android:icon="@drawable/ic_menu_camera"
-        android:title="LATEST NEWS" />
+        <item
+            android:id="@+id/introduction"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="INTRODUCTION" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="COMMITEE" />
+        <item
+            android:id="@+id/latestnews"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="LATEST NEWS" />
+        <item
+            android:id="@+id/viewposts"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="ACHIEVEMENTS" />
+        <item
+            android:id="@+id/nav_facilities"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="FACILITIES" />
+        <item
+            android:id="@+id/nav_athletics"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="ATHLETIC MEET" />
 
         <item
-            android:id="@+id/latestmeetnews"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="LATEST MEET NEWS" />
-    <item
-        android:id="@+id/viewposts"
-        android:icon="@drawable/ic_menu_camera"
-        android:title="ACHIEVEMENTS" />
-    <item
-        android:id="@+id/nav_facilities"
-        android:icon="@drawable/ic_menu_manage"
-        android:title="FACILITIES" />
-    <item
-        android:id="@+id/nav_records"
-        android:icon="@drawable/ic_menu_slideshow"
-        android:title="EXISTING RECORDS" />
-    <item
-        android:id="@+id/nav_scholarships"
-        android:icon="@drawable/ic_menu_slideshow"
-        android:title="SCHOLARSHIPS" />
-    <item
-        android:id="@+id/nav_graph"
-        android:icon="@drawable/ic_menu_manage"
-        android:title="GRAPH" />
+            android:id="@+id/nav_scholarships"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="SCHOLARSHIPS" />
+        <item
+            android:id="@+id/nav_graph"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="GRAPH" />
+
+
+
     </group>
 
     <item android:title="Communicate">
         <menu>
+
             <item
                 android:id="@+id/nav_map"
                 android:icon="@drawable/ic_menu_manage"
@@ -58,7 +58,7 @@
                 android:title="DEVELOPERS"
                 />
 
-</menu>
+        </menu>
     </item>
 
 </menu>

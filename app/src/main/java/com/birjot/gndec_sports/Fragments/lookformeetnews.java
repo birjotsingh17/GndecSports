@@ -10,8 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.birjot.gndec_sports.Latest_News.NewsAdapter;
-import com.birjot.gndec_sports.Latest_News.newsupload;
+import com.birjot.gndec_sports.Model.NewsAdapter;
+import com.birjot.gndec_sports.Model.newsupload;
 import com.birjot.gndec_sports.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
