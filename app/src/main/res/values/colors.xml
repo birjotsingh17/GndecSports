@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
+        <item name="visible" type="id"/>
+        <item name="masked" type="id"/>
+
     <color name="colorPrimary">#2bb7b2</color>
     <color name="colorPrimaryDark">#211b1b</color>
     <color name="white">#ffffff</color>

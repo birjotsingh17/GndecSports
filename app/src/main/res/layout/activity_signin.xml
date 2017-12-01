@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/signin1"
-    tools:context="com.birjot.gndec_sports.Activities.SigninActivity">
+    tools:context="com.birjot.gndec_sports.Activities.SigninActivity"
+    android:orientation="vertical">
 <!--
 
     <ImageView
