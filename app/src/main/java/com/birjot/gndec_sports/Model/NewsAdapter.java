@@ -1,4 +1,4 @@
-package com.birjot.gndec_sports.Latest_News;
+package com.birjot.gndec_sports.Model;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

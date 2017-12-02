@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/signin1"
-    tools:context="com.birjot.gndec_sports.Activities.SigninActivity"
     android:orientation="vertical">
+    android:padding="15dp"
+    tools:context="com.birjot.gndec_sports.Activities.SigninActivity">
+
 <!--
 
     <ImageView
@@ -51,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:textColor="@color/colortable"
+            android:textColor="@color/white"
             android:ems="10"
             android:inputType="textEmailAddress"
             android:hint="Email" />
@@ -71,6 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textColor="@color/white"
             android:layout_marginTop="10dp"
             android:ems="10"
             android:inputType="textPassword"
@@ -78,12 +81,14 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
+        android:theme="@style/ButtonStyle"
         android:id="@+id/ButtonSignIn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
-        android:text="sign in" />
+        android:text="SIGN IN" />
+
 
 
     <TextView

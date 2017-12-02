@@ -6,7 +6,7 @@
     android:padding="16dp"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.birjot.gndec_sports_admin.Activities.Developers">
+    tools:context="com.birjot.gndec_sports.Activities.Developers">
 
 
     <TextView
