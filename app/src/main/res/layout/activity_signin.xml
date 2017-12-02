@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/signin1"
+    android:orientation="vertical">
     android:padding="15dp"
     tools:context="com.birjot.gndec_sports.Activities.SigninActivity">
+
 <!--
 
     <ImageView
