@@ -1,121 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
+
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context="com.birjot.gndec_sports.Activities.ContactUs">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/border"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/DP"
-            android:layout_width="84dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.21"
-            android:src="@drawable/birjot"
-            app:civ_border_color="@color/white"
-            app:civ_border_width="2dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewName1"
-                android:layout_width="198dp"
-                android:layout_height="40dp"
-                android:gravity="center_vertical"
-                android:text="Birjot Singh"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textViewEmail1"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center_vertical"
-                android:text="birjotsingh17@gmail.com"
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/txtViewEmai1"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center_vertical"
-                android:text="phone"
-                android:textSize="16dp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/border"
-        android:orientation="horizontal"
-        android:weightSum="1">
-
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/DP1"
-            android:layout_width="84dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.21"
-            android:src="@drawable/birjot"
-            app:civ_border_color="@color/white"
-            app:civ_border_width="2dp" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
+            android:padding="16dp"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textVieame1"
-                android:layout_width="198dp"
-                android:layout_height="40dp"
-                android:gravity="center_vertical"
-                android:text="Birjot Singh"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textViewEmal1"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center_vertical"
-                android:text="birjotsingh17@gmail.com"
-                android:textSize="16dp" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border"
+                android:orientation="horizontal"
+                android:weightSum="1">
 
-            <TextView
-                android:id="@+id/textViewEmai1"
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/dDP"
+                    android:layout_width="84dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.21"
+                    android:src="@drawable/gunjanmam"
+                    android:layout_marginLeft="13dp"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewName1"
+                        android:layout_width="194dp"
+                        android:layout_height="74dp"
+                        android:gravity="center_vertical"
+                        android:text="DR. (Mrs) GUNJAN BHARDWAJ"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textVewEmail1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="Phd (UGC-NET Qualified)"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/txewEmai1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="Ph. 9501044221"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center_vertical"
-                android:text="phone"
-                android:textSize="16dp" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border"
+                android:orientation="horizontal"
+                android:weightSum="1">
 
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/DdP"
+                    android:layout_width="84dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.21"
+                    android:src="@drawable/harjinder"
+                    android:layout_marginLeft="13dp"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewNam1"
+                        android:layout_width="194dp"
+                        android:layout_height="74dp"
+                        android:gravity="center_vertical"
+                        android:text="Prof. HARJINDER SINGH"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewEil1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="MPhil (UGC-NET Qualified)"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/txtViEmai1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="Ph. 8196955587"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/DP"
+                    android:layout_width="84dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.21"
+                    android:src="@drawable/suminderngh"
+                    android:layout_marginLeft="13dp"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViee1"
+                        android:layout_width="194dp"
+                        android:layout_height="74dp"
+                        android:gravity="center_vertical"
+                        android:text="Prof. SUMINDER SINGH"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewEmail1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="M.P.E."
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/txtViewEmai1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:text="Ph. 9779003011"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
 
-    </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/ButtonStyle"
+            android:layout_marginTop="15dp"
+            android:text="Mail Us"
+            android:clickable="true"
+            android:padding="15dp"
+            android:textSize="20dp"
+            android:onClick="openmail"/>
 
     </LinearLayout>
+    </ScrollView>

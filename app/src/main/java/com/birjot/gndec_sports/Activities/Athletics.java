@@ -1,18 +1,22 @@
 package com.birjot.gndec_sports.Activities;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.birjot.gndec_sports.Fragments.PdfListFragment;
 import com.birjot.gndec_sports.Fragments.Records;
-import com.birjot.gndec_sports.Fragments.intro1;
+import com.birjot.gndec_sports.Fragments.lookforbestathlete;
 import com.birjot.gndec_sports.Fragments.lookformeetnews;
 import com.birjot.gndec_sports.Model.ViewPagerAdapter;
 import com.birjot.gndec_sports.R;
@@ -20,11 +24,11 @@ import com.birjot.gndec_sports.R;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Athletics extends AppCompatActivity {
+public class Athletics extends AppCompatActivity  {
 
     ViewPager viewPager;
 
-    private Button newsath, resultsath, recordsath;
+    private Button newsath, resultsath, recordsath,stars;
 
     int currentPage = 0;
     Timer timer;
@@ -57,7 +61,7 @@ public class Athletics extends AppCompatActivity {
         final Handler handler = new Handler();
         final Runnable Update = new Runnable() {
             public void run() {
-                if (currentPage == 4-1) {
+                if (currentPage == 10-1) {
                     currentPage = 0;
                 }
                 viewPager.setCurrentItem(currentPage++, true);
@@ -77,6 +81,16 @@ public class Athletics extends AppCompatActivity {
         newsath=(Button) findViewById(R.id.newsath);
         recordsath=(Button) findViewById(R.id.recordsath);
         resultsath=(Button) findViewById(R.id.resultsath);
+
+        stars=(Button) findViewById(R.id.stars);
+
+        stars.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                submitPost4();
+            }
+        });
 
         recordsath.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +122,8 @@ public class Athletics extends AppCompatActivity {
 
 
     }
+
+
     public boolean onSupportNavigateUp(){
         onBackPressed();
         return true;
@@ -117,25 +133,36 @@ public class Athletics extends AppCompatActivity {
 
         Intent intent = new Intent(this,Developers.class);
         startActivity(intent);
-        }
+    }
 
-        private void submitPost1(){
-            Fragment fragment = null;
-            fragment = new Records();
+    private void submitPost1(){
+        Fragment fragment = null;
+        fragment = new Records();
 
 
-            if (fragment != null) {
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.frameath, fragment);
-                ft.commit();
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frameath, fragment);
+            ft.commit();
+
+        }}
+
+    private void submitPost4(){
+        Fragment fragment = null;
+        fragment = new lookforbestathlete();
+
+
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.frameath, fragment);
+            ft.commit();
 
         }}
 
     private void submitPost2() {
-        Toast.makeText(this, "working1", Toast.LENGTH_SHORT).show();
 
         Fragment fragment = null;
-        fragment = new intro1();
+        fragment = new PdfListFragment();
 
 
         if (fragment != null) {
@@ -160,6 +187,6 @@ public class Athletics extends AppCompatActivity {
 
 
     }
-    }
+}
 
 

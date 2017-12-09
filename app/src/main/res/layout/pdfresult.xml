@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/linearlayoutpdf"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+
+            <TextView
+                android:id="@+id/headpdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="heading"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/descpdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="description"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/pdfdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="date"
+                android:textSize="10dp"
+                android:padding="10dp"/>
+
+
+
+
+
+
+        </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:paddingLeft="7dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_download"/>
+
+            </LinearLayout>-->
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>
