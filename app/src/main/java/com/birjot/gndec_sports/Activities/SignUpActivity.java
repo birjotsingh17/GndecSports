@@ -55,6 +55,8 @@ public class SignUpActivity extends Progressdialog {
 
 
         initViews();
+
+
         TAG = getString(R.string.tag);
         getGender();
 
@@ -92,6 +94,8 @@ public class SignUpActivity extends Progressdialog {
 
 //        email
         email = (EditText) findViewById(R.id.email);
+
+
 
 //        password
         password = (EditText) findViewById(R.id.password);

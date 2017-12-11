@@ -26,7 +26,10 @@ import com.birjot.gndec_sports.Fragments.lookforinterversity;
 import com.birjot.gndec_sports.Fragments.lookformeetnews;
 import com.birjot.gndec_sports.Fragments.lookforptustars;
 import com.birjot.gndec_sports.Fragments.posts;
+
+import com.birjot.gndec_sports.Activities.SignUpActivity ;
 import com.birjot.gndec_sports.Fragments.lookforLastestnews;
+
 import com.birjot.gndec_sports.R;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -122,6 +125,13 @@ public class HomeActivity extends Progressdialog
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+        if(id==R.id.action_RegistrtionForm)
+        {
+            Intent intent = new Intent(HomeActivity.this , RegistrationForm.class) ;
+            
+            startActivity(intent);
+            Toast.makeText(this, "Fill Registration Form Here ", Toast.LENGTH_SHORT).show();
         }
         if (id == R.id.action_logout) {
 

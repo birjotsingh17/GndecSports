@@ -265,5 +265,22 @@ month in the morning and evenings six day a week.</string>
         </string>
     <string name="title_activity_delete">delete</string>
     <string name="title_activity_made_by">MadeByActivity</string>
+    <string-array name="FieldEvents">
+        <item>--Select Field Event--</item>
+        <item>Shot put</item>
+        <item>Long jump</item>
+        <item>Javelin throw</item>
+        <item>Hammer throw</item>
+        <item>Triple jump</item>
+        <item>Pole Volt</item>
+        <item>Discus Throw</item>
+    </string-array>
+    <string-array name="TrackEvents">
+    <item>--Select Track Event--</item>
+    <item>100m race</item>
+    <item>500mm race</item>
+    <item>1500m race</item>
+    <item>150000m race</item>
+    </string-array>
 
 </resources>
