@@ -20,8 +20,11 @@ import android.widget.Toast;
 import com.birjot.gndec_sports.Fragments.Games;
 import com.birjot.gndec_sports.Fragments.GraphFragment;
 import com.birjot.gndec_sports.Fragments.Records;
+import com.birjot.gndec_sports.Fragments.extraposts;
 import com.birjot.gndec_sports.Fragments.introduction;
+import com.birjot.gndec_sports.Fragments.lookforinterversity;
 import com.birjot.gndec_sports.Fragments.lookformeetnews;
+import com.birjot.gndec_sports.Fragments.lookforptustars;
 import com.birjot.gndec_sports.Fragments.posts;
 
 import com.birjot.gndec_sports.Activities.SignUpActivity ;
@@ -205,6 +208,9 @@ public class HomeActivity extends Progressdialog
             case R.id.viewposts:
                 fragment = new posts();
                 break;
+            case R.id.viewposts11:
+                fragment = new extraposts();
+                break;
             case R.id.nav_facilities:
                 fragment = new Games();
                 break;
@@ -215,9 +221,19 @@ public class HomeActivity extends Progressdialog
                 Intent intent = new Intent(HomeActivity.this,Developers.class);
                 startActivity(intent);
                 break;
+            case R.id.nav_contactus:
+                Intent intent1 = new Intent(HomeActivity.this,ContactUs.class);
+                startActivity(intent1);
+                break;
             case R.id.nav_athletics:
                 Intent intent5 = new Intent(HomeActivity.this,Athletics.class);
                 startActivity(intent5);
+                break;
+            case R.id.ptustars:
+                fragment = new lookforptustars();
+                break;
+            case R.id.interversity:
+                fragment = new lookforinterversity();
                 break;
             case R.id.nav_graph:
                 fragment = new GraphFragment();

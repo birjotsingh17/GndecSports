@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,6 +26,10 @@
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activities.adminhome" />
+
+
+        <activity android:name=".Activities.Developers" />
+
         <activity
             android:name=".Games_Activities.BasketBall"
             android:label="@string/title_activity_basket_ball"
@@ -46,7 +54,25 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
         </activity>
 
+        <activity android:name=".Games_Activities.LawnTennis" />
+        <activity android:name=".Games_Activities.Swimming" />
+        <activity android:name=".Games_Activities.gym" />
+        <activity android:name=".Games_Activities.chess" />
+        <activity android:name=".Games_Activities.volleyball" />
+        <activity android:name=".Games_Activities.cricket" />
+        <activity android:name=".Games_Activities.billiards" />
+        <activity android:name=".Games_Activities.Hockey" />
+        <activity android:name=".Games_Activities.Handball" />
+        <activity android:name=".Games_Activities.Cycling" />
+        <activity android:name=".Games_Activities.Badminton" />
+        <activity android:name=".Games_Activities.Kabadi" />
+        <activity android:name=".Games_Activities.Shooting" />
+        <activity android:name=".Games_Activities.Football" />
+        <activity android:name=".Games_Activities.BasketBall" />
+
         <activity android:name=".Activities.Athletics" />
+
+        <activity android:name=".Activities.ContactUs"></activity>
     </application>
 
 </manifest>
