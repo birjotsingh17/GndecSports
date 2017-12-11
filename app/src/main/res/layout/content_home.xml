@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:gravity="bottom"
+    app:umanoPanelHeight="20dp"
+    app:umanoShadowHeight="0dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.birjot.gndec_sports.Activities.HomeActivity"
     tools:showIn="@layout/app_bar_home">
@@ -14,12 +19,74 @@
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_centerInParent="true"
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="0dp">
 
     </FrameLayout>
 
 
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+
+            android:layout_gravity="center"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:src="@drawable/slidde"/>
+
+        <Button
+            android:paddingTop="30dp"
+            android:paddingBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Us"
+            android:theme="@style/ButtonStyle"
+            android:onClick="contaactus"
+            />
+
+        <Button
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Map"
+            android:theme="@style/ButtonStyle"
+            android:onClick="maap"
+            />
+        <Button
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share"
+            android:theme="@style/ButtonStyle"
+            android:onClick="shaare"
+            />
+        <Button
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Developers"
+            android:theme="@style/ButtonStyle"
+            android:onClick="developerss"
+            />
+
+        <Button
+            android:paddingTop="15dp"
+            android:paddingBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:theme="@style/ButtonStyle"
+            android:onClick="logouut"
+            />
 
 
-</android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

@@ -15,6 +15,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.birjot.gndec_sports.Fragments.Games;
@@ -115,6 +116,39 @@ public class HomeActivity extends Progressdialog
         return true;
     }
 
+    public void contaactus(View view){
+        Intent intent1 = new Intent(HomeActivity.this,ContactUs.class);
+        startActivity(intent1);
+    }
+
+    public void developerss(View view){
+        Intent intent = new Intent(HomeActivity.this,Developers.class);
+        startActivity(intent);
+    }
+
+    public void shaare(View view){
+        ApplicationInfo applicationInfo = getApplicationContext().getApplicationInfo();
+        String apkPath = applicationInfo.sourceDir;
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("application/vnd.android.package-archieve");
+        intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(apkPath)));
+        startActivity(Intent.createChooser(intent, "Share App Using"));
+
+    }
+    public void logouut(View view){
+        showProgressDialog();
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(HomeActivity.this, SigninActivity.class));
+        finish();
+    }
+    public void maap(View view){
+        String url = "https://lab.gdy.club/#map=19/8444713.27/3614567.83/0";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+    }
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -135,12 +169,12 @@ public class HomeActivity extends Progressdialog
         }
         if (id == R.id.action_logout) {
 
-
+/*
             showProgressDialog();
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(HomeActivity.this, SigninActivity.class));
             finish();
-            return true;
+            return true;*/
         }
 
 
@@ -153,6 +187,9 @@ public class HomeActivity extends Progressdialog
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        displaySelectedScreen(item.getItemId());
+        //make this method blank
+        return true;
        /* if (id == R.id.intro) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
@@ -161,21 +198,21 @@ public class HomeActivity extends Progressdialog
 
         } else if (id == R.id.nav_manage) {
 
-        } else*/ if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_share) {
 
-            /*item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
                 public boolean onMenuItemClick(MenuItem menuItem) {*/
-                    ApplicationInfo applicationInfo = getApplicationContext().getApplicationInfo();
+                   /* ApplicationInfo applicationInfo = getApplicationContext().getApplicationInfo();
                     String apkPath = applicationInfo.sourceDir;
                     Intent intent = new Intent(Intent.ACTION_SEND);
                     intent.setType("application/vnd.android.package-archieve");
                     intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(apkPath)));
                     startActivity(Intent.createChooser(intent, "Share App Using"));
-
+*/
                   /*  return false;
                 }*/
-           /* });*/
+           /* });
 
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
@@ -184,9 +221,7 @@ public class HomeActivity extends Progressdialog
         }
 
         else {  //calling the method displayselectedscreen and passing the id of selected menu
-            displaySelectedScreen(item.getItemId());
-            //make this method blank
-            return true;}
+            }*/
 
         /*else if (id == R.id.nav_send) {
 
@@ -217,14 +252,14 @@ public class HomeActivity extends Progressdialog
             case R.id.latestnews:
                 fragment = new lookforLastestnews();
                 break;
-            case R.id.nav_madeby:
+           /* case R.id.nav_madeby:
                 Intent intent = new Intent(HomeActivity.this,Developers.class);
                 startActivity(intent);
                 break;
             case R.id.nav_contactus:
                 Intent intent1 = new Intent(HomeActivity.this,ContactUs.class);
                 startActivity(intent1);
-                break;
+                break;*/
             case R.id.nav_athletics:
                 Intent intent5 = new Intent(HomeActivity.this,Athletics.class);
                 startActivity(intent5);
