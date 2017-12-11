@@ -59,7 +59,7 @@
         </menu>
     </item>
 
-    <item android:title="Communicate">
+   <!-- <item android:title="Communicate">
         <menu>
 
             <item
@@ -84,5 +84,5 @@
                 />
 
         </menu>
-    </item>
+    </item>-->
 </menu>
