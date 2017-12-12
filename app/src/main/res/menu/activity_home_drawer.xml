@@ -7,7 +7,7 @@
         android:icon="@drawable/ic_menu_camera"
         android:title="INTRODUCTION" />
     <item
-        android:id="@+id/nav_gallery"
+        android:id="@+id/commitee"
         android:icon="@drawable/ic_menu_gallery"
         android:title="COMMITEE" />
     <item

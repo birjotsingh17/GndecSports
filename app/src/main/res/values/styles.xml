@@ -11,6 +11,15 @@
     <style name="ButtonStyle" parent="android:Theme">
         <item name="android:buttonStyle">@style/CKButton</item>
     </style>
+    <style name="ButtonStyle1" parent="android:Theme">
+        <item name="android:buttonStyle">@style/CKButton1</item>
+    </style>
+
+    <style name="CKButton1" parent="android:Widget.Holo.Button.Borderless">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/cardview_dark_background</item>
+    </style>
 
     <style name="CKButton" parent="android:Widget.Holo.Button.Borderless">
         <item name="android:textSize">18sp</item>
