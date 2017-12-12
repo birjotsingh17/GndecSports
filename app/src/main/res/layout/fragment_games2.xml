@@ -8,7 +8,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-    tools:context="com.birjot.gndec_sports_admin.Fragments.Games">
+    tools:context="com.birjot.gndec_sports.Fragments.Games">
 
     </android.support.v7.widget.RecyclerView>
 

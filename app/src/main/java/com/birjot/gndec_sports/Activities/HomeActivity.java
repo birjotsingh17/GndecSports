@@ -6,28 +6,31 @@ import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.birjot.gndec_sports.Fragments.Games;
 import com.birjot.gndec_sports.Fragments.GraphFragment;
 import com.birjot.gndec_sports.Fragments.Records;
-import com.birjot.gndec_sports.Fragments.intro1;
+import com.birjot.gndec_sports.Fragments.extraposts;
 import com.birjot.gndec_sports.Fragments.introduction;
+import com.birjot.gndec_sports.Fragments.lookforinterversity;
+import com.birjot.gndec_sports.Fragments.lookformeetnews;
+import com.birjot.gndec_sports.Fragments.lookforptustars;
 import com.birjot.gndec_sports.Fragments.posts;
-import com.birjot.gndec_sports.Latest_News.lookforLastestnews;
+
+import com.birjot.gndec_sports.Activities.SignUpActivity ;
+import com.birjot.gndec_sports.Fragments.lookforLastestnews;
+
 import com.birjot.gndec_sports.R;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -113,6 +116,39 @@ public class HomeActivity extends Progressdialog
         return true;
     }
 
+    public void contaactus(View view){
+        Intent intent1 = new Intent(HomeActivity.this,ContactUs.class);
+        startActivity(intent1);
+    }
+
+    public void developerss(View view){
+        Intent intent = new Intent(HomeActivity.this,Developers.class);
+        startActivity(intent);
+    }
+
+    public void shaare(View view){
+        ApplicationInfo applicationInfo = getApplicationContext().getApplicationInfo();
+        String apkPath = applicationInfo.sourceDir;
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("application/vnd.android.package-archieve");
+        intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(apkPath)));
+        startActivity(Intent.createChooser(intent, "Share App Using"));
+
+    }
+    public void logouut(View view){
+        showProgressDialog();
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(HomeActivity.this, SigninActivity.class));
+        finish();
+    }
+    public void maap(View view){
+        String url = "https://lab.gdy.club/#map=19/8444713.27/3614567.83/0";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+    }
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -124,13 +160,21 @@ public class HomeActivity extends Progressdialog
         if (id == R.id.action_settings) {
             return true;
         }
+        if(id==R.id.action_RegistrtionForm)
+        {
+            Intent intent = new Intent(HomeActivity.this , RegistrationForm.class) ;
+            
+            startActivity(intent);
+            Toast.makeText(this, "Fill Registration Form Here ", Toast.LENGTH_SHORT).show();
+        }
         if (id == R.id.action_logout) {
 
-
+/*
             showProgressDialog();
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(HomeActivity.this, SigninActivity.class));
-            return true;
+            finish();
+            return true;*/
         }
 
 
@@ -143,6 +187,9 @@ public class HomeActivity extends Progressdialog
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        displaySelectedScreen(item.getItemId());
+        //make this method blank
+        return true;
        /* if (id == R.id.intro) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
@@ -151,21 +198,21 @@ public class HomeActivity extends Progressdialog
 
         } else if (id == R.id.nav_manage) {
 
-        } else*/ if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_share) {
 
-            /*item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                 @Override
                 public boolean onMenuItemClick(MenuItem menuItem) {*/
-                    ApplicationInfo applicationInfo = getApplicationContext().getApplicationInfo();
+                   /* ApplicationInfo applicationInfo = getApplicationContext().getApplicationInfo();
                     String apkPath = applicationInfo.sourceDir;
                     Intent intent = new Intent(Intent.ACTION_SEND);
                     intent.setType("application/vnd.android.package-archieve");
                     intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(apkPath)));
                     startActivity(Intent.createChooser(intent, "Share App Using"));
-
+*/
                   /*  return false;
                 }*/
-           /* });*/
+           /* });
 
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
             drawer.closeDrawer(GravityCompat.START);
@@ -174,9 +221,7 @@ public class HomeActivity extends Progressdialog
         }
 
         else {  //calling the method displayselectedscreen and passing the id of selected menu
-            displaySelectedScreen(item.getItemId());
-            //make this method blank
-            return true;}
+            }*/
 
         /*else if (id == R.id.nav_send) {
 
@@ -198,19 +243,35 @@ public class HomeActivity extends Progressdialog
             case R.id.viewposts:
                 fragment = new posts();
                 break;
+            case R.id.viewposts11:
+                fragment = new extraposts();
+                break;
             case R.id.nav_facilities:
                 fragment = new Games();
-                break;
-            case R.id.nav_records:
-                fragment = new Records();
                 break;
             case R.id.latestnews:
                 fragment = new lookforLastestnews();
                 break;
-            case R.id.nav_madeby:
+           /* case R.id.nav_madeby:
                 Intent intent = new Intent(HomeActivity.this,Developers.class);
                 startActivity(intent);
                 break;
+
+            case R.id.nav_contactus:
+                Intent intent1 = new Intent(HomeActivity.this,ContactUs.class);
+                startActivity(intent1);
+                break;*/
+            case R.id.nav_athletics:
+                Intent intent5 = new Intent(HomeActivity.this,Athletics.class);
+                startActivity(intent5);
+                break;
+            case R.id.ptustars:
+                fragment = new lookforptustars();
+                break;
+            case R.id.interversity:
+                fragment = new lookforinterversity();
+                break;
+
             case R.id.nav_scholarships:
                 Intent i   = new Intent(HomeActivity.this , scholarshiplist.class);
                 startActivity(i);
@@ -219,7 +280,6 @@ public class HomeActivity extends Progressdialog
                 Intent i1  = new Intent(HomeActivity.this , commitee.class) ;
                 startActivity(i1);
                 break ;
-
             case R.id.nav_graph:
                 fragment = new GraphFragment();
                /* Intent intent = new Intent(HomeActivity.this,Graphs.class);

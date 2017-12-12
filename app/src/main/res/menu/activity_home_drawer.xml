@@ -2,58 +2,88 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-    <item
-        android:id="@+id/introduction"
-        android:icon="@drawable/ic_menu_camera"
-        android:title="INTRODUCTION" />
-    <item
-        android:id="@+id/commitee"
-        android:icon="@drawable/ic_menu_gallery"
-        android:title="COMMITEE" />
-    <item
-        android:id="@+id/latestnews"
-        android:icon="@drawable/ic_menu_camera"
-        android:title="LATEST NEWS" />
-    <item
-        android:id="@+id/viewposts"
-        android:icon="@drawable/ic_menu_camera"
-        android:title="ACHIEVEMENTS" />
-    <item
-        android:id="@+id/nav_facilities"
-        android:icon="@drawable/ic_menu_manage"
-        android:title="FACILITIES" />
-    <item
-        android:id="@+id/nav_records"
-        android:icon="@drawable/ic_menu_slideshow"
-        android:title="EXISTING RECORDS" />
-    <item
-        android:id="@+id/nav_scholarships"
-        android:icon="@drawable/ic_menu_slideshow"
-        android:title="SCHOLARSHIPS" />
-    <item
-        android:id="@+id/nav_graph"
-        android:icon="@drawable/ic_menu_manage"
-        android:title="GRAPH" />
+
+        <item
+            android:id="@+id/introduction"
+            android:icon="@drawable/infoicon"
+            android:title="Introduction" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/commiteicon"
+            android:title="Commite" />
+        <item
+            android:id="@+id/latestnews"
+            android:icon="@drawable/libnewsicon"
+            android:title="Latest News" />
+
+        <item
+            android:id="@+id/nav_facilities"
+            android:icon="@drawable/achieveicon"
+            android:title="Facilities" />
+        <item
+            android:id="@+id/nav_athletics"
+            android:icon="@drawable/athleticsicon"
+            android:title="Athletic Meet" />
+
+        <item
+            android:id="@+id/nav_scholarships"
+            android:icon="@drawable/scholaricon"
+            android:title="Scholarships" />
+
+        <item
+            android:id="@+id/nav_graph"
+            android:icon="@drawable/graphicon"
+            android:title="Analysis" />
+
+
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Achievements">
         <menu>
             <item
+                android:id="@+id/viewposts"
+                android:icon="@drawable/achiicon"
+                android:title="Intramural" />
+            <item
+                android:id="@+id/viewposts11"
+                android:icon="@drawable/achiicon"
+                android:title="Extramural" />
+            <item
+                android:id="@+id/interversity"
+                android:icon="@drawable/achiicon"
+                android:title="Interversity" />
+            <item
+                android:id="@+id/ptustars"
+                android:icon="@drawable/achiicon"
+                android:title="PTU Stars" />
+
+        </menu>
+    </item>
+
+   <!-- <item android:title="Communicate">
+        <menu>
+
+            <item
+                android:id="@+id/nav_contactus"
+                android:icon="@drawable/contactusicon"
+                android:title="Contact Us"
+                />
+
+            <item
                 android:id="@+id/nav_map"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="MAP" />
+                android:icon="@drawable/mapicon"
+                android:title="Map" />
 
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="SHARE" />
+                android:title="Share" />
             <item
                 android:id="@+id/nav_madeby"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="DEVELOPERS"
+                android:icon="@drawable/developers"
+                android:title="Developers"
                 />
 
-</menu>
-    </item>
-
+        </menu>
+    </item>-->
 </menu>

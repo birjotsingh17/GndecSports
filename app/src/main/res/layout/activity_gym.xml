@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.birjot.gndec_sports.Games_Activities.gym"
+   >
+
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/border"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="67dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/gymm"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textVwName1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:text="GYM" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="357dp"
+            android:layout_height="192dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/gym3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gym"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:padding="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gym2"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:padding="5dp"/>
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="354dp"
+            android:layout_height="173dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/gym2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gym3"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/DP1"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:src="@drawable/harjinder"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewName1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:text="Anmol Singh Rattan" />
+
+            <TextView
+                android:id="@+id/textViewEmail1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="Captain College Hockey Team" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
+</ScrollView>
+
+
+
