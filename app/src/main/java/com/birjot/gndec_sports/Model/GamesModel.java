@@ -4,7 +4,7 @@ package com.birjot.gndec_sports.Model;
  * Created by birjot on 13/11/17.
  */
 
-public class GamesModel {
+public class  GamesModel {
 
     int icon;
     String Name;

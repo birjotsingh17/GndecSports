@@ -32,14 +32,7 @@
 
         <activity android:name=".Activities.Developers" />
 
-        <activity
-            android:name=".Games_Activities.BasketBall"
-            android:label="@string/title_activity_basket_ball"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Games_Activities.FootBall"
-            android:label="@string/title_activity_foot_ball"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".Activities.ResetActivity"
 
