@@ -67,12 +67,16 @@
                 android:layout_marginTop="20dp"
                 android:src="@drawable/basket1"/>
 
-
-
-
         </LinearLayout>
 
 
+        <WebView
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:id="@+id/basketweb"
+            android:layout_height="wrap_content">
+
+        </WebView>
 
 
         <LinearLayout
@@ -91,52 +95,59 @@
 
         </LinearLayout>
 
-
-        <LinearLayout
-            android:orientation="horizontal"
+        <WebView
+            android:layout_marginTop="25dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/border"
-            >
+            android:id="@+id/basketweb2"
+            android:layout_height="wrap_content">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/DP1"
-                android:layout_width="84dp"
-                android:layout_height="84dp"
-                android:src="@drawable/harjinder"
-                app:civ_border_color="@color/white"
-                app:civ_border_width="2dp" />
+        </WebView>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:orientation="vertical">
+        <!-- <LinearLayout
+             android:orientation="horizontal"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center_horizontal"
+             android:layout_marginTop="40dp"
+             android:background="@drawable/border"
+             >
 
-                <TextView
-                    android:id="@+id/textViewName1"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:textColor="@color/black"
-                    android:gravity="center_vertical"
-                    android:text="Anmol Singh Rattan" />
+             <de.hdodenhof.circleimageview.CircleImageView
+                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:id="@+id/DP1"
+                 android:layout_width="84dp"
+                 android:layout_height="84dp"
+                 android:src="@drawable/cbasket"
+                 app:civ_border_color="@color/white"
+                 app:civ_border_width="2dp" />
 
-                <TextView
-                    android:id="@+id/textViewEmail1"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:textSize="16dp"
-                    android:gravity="center_vertical"
-                    android:text="Captain College Hockey Team" />
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="15dp"
+                 android:orientation="vertical">
 
-            </LinearLayout>
+                 <TextView
+                     android:id="@+id/textViewName1"
+                     android:layout_width="match_parent"
+                     android:layout_height="40dp"
+                     android:textStyle="bold"
+                     android:textSize="20dp"
+                     android:textColor="@color/black"
+                     android:gravity="center_vertical"
+                     android:text="Sameath Singh" />
 
-        </LinearLayout>
+                 <TextView
+                     android:id="@+id/textViewEmail1"
+                     android:layout_width="match_parent"
+                     android:layout_height="40dp"
+                     android:textSize="16dp"
+                     android:gravity="center_vertical"
+                     android:text="Captain College Basketball Team" />
+
+             </LinearLayout>
+
+         </LinearLayout>-->
     </LinearLayout>
 
 </ScrollView>

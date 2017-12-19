@@ -42,18 +42,19 @@ public class Games extends Fragment {
 
         recyclerView = (RecyclerView) view.findViewById(R.id.Recycle);
 
+
         GamesModel u1 = new GamesModel(R.drawable.weightlifting,"GYM");
-        GamesModel u2 = new GamesModel(R.drawable.volleyball,"VOLLEYBALL");
+        GamesModel u2 = new GamesModel(R.drawable.vvvolleyball,"VOLLEYBALL");
         GamesModel u3 = new GamesModel(R.drawable.hockeyyyy,"HOCKEY");
         GamesModel u4 = new GamesModel(R.drawable.tennis,"LAWNTENNIS");
         GamesModel u5 = new GamesModel(R.drawable.billiard,"BILLIARDS");
-        GamesModel u6 = new GamesModel(R.drawable.fffootball,"FOOTBALL");
+        GamesModel u6 = new GamesModel(R.drawable.ffffootball,"FOOTBALL");
 
         GamesModel u7 = new GamesModel(R.drawable.basketball,"BASKETBALL");
-        GamesModel u8 = new GamesModel(R.drawable.cricket,"CRICKET");
+        GamesModel u8 = new GamesModel(R.drawable.cccricket,"CRICKET");
         GamesModel u9 = new GamesModel(R.drawable.pool,"SWIMING");
         GamesModel u10 = new GamesModel(R.drawable.strategy,"CHESS");
-  //      GamesModel u11 = new GamesModel(R.drawable.footballplayer,"HANDBALL");
+        //      GamesModel u11 = new GamesModel(R.drawable.footballplayer,"HANDBALL");
 
         GamesModel u15 = new GamesModel(R.drawable.racetrak,"TRACK AND FIELD");
         GamesModel u12 = new GamesModel(R.drawable.bike,"CYCLING");

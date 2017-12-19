@@ -43,7 +43,7 @@ public class Athletics extends AppCompatActivity  {
 
         submitPost3();
 
-        setTitle("ATHLETIC MEET");
+        setTitle("Athletic Meet");
 
         if(getSupportActionBar() != null){
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
