@@ -22,68 +22,79 @@
 
 
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/border"
-        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/border"
+            >
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="67dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/lawntennis"
-            app:civ_border_color="@color/white"
-            app:civ_border_width="2dp" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="67dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/lawntennis"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textVwName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:text="LAWN TENNIS" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/textVwName1"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:textStyle="bold"
-                android:textSize="20dp"
-                android:textColor="@color/black"
-                android:gravity="center_vertical"
-                android:text="LAWN TENNIS" />
+            <ImageView
+                android:layout_width="351dp"
+                android:layout_height="203dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/lawn"/>
 
 
 
         </LinearLayout>
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="351dp"
-            android:layout_height="203dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/lawn"/>
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LAWN TENNIS COURT"
+            android:gravity="center"/>
 
 
+        <WebView
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:id="@+id/lawnweb"
+            android:layout_height="wrap_content">
 
-    </LinearLayout>
+        </WebView>
 
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="LAWN TENNIS COURT"
-        android:gravity="center"/>
-
-    <LinearLayout
+        <!--<LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -128,9 +139,9 @@
         </LinearLayout>
 
     </LinearLayout>
+-->
 
-
-</LinearLayout>
+    </LinearLayout>
 
 
 

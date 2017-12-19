@@ -59,9 +59,6 @@ public class lookforbestathlete extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_lookforbestathlete, container, false);
         rootView.setTag(TAG);
 
-
-
-
         recyclerView3 = (RecyclerView) rootView.findViewById(R.id.recyclerViewbest);
         recyclerView3.setHasFixedSize(true);
 

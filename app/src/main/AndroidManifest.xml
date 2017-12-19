@@ -3,21 +3,22 @@
     package="com.birjot.gndec_sports">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/photo6104773795236653005"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".Activities.SigninActivity"
-
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
         <activity
             android:name=".Activities.SignUpActivity"
@@ -25,21 +26,15 @@
 
         <activity
             android:name=".Activities.HomeActivity"
-            android:label="@string/title_activity_home"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity android:name=".Activities.adminhome" />
 
 
         <activity android:name=".Activities.Developers" />
 
-        <activity
-            android:name=".Games_Activities.BasketBall"
-            android:label="@string/title_activity_basket_ball"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Games_Activities.FootBall"
-            android:label="@string/title_activity_foot_ball"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".Activities.ResetActivity"
 

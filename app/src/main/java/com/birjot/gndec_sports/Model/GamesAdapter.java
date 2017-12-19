@@ -77,6 +77,16 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
         holder.txtName.setText(user.getName());
         holder.img.setImageResource(user.getIcon());
 
+      /*  int width = 50, height = 50;
+        ImageRequest request = ImageRequestBuilder.newBuilderWithSource(uri)
+                .setResizeOptions(new ResizeOptions(width, height))
+                .build();
+        PipelineDraweeController controller = Fresco.newDraweeControllerBuilder()
+                .setOldController(mDraweeView.getController())
+                .setImageRequest(request)
+                .build();
+        mSimpleDraweeView.setController(controller);
+*/
 
 
         // onclick recyclerview :: https://www.youtube.com/watch?v=dmIfFIHnKsk
@@ -147,9 +157,14 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
 
                         break;
 
-                    case 10:
+                  /*  case 10:
                         Intent intent10 = new Intent(context, Handball.class);
                         context.startActivity(intent10);
+
+                        break;*/
+                    case 10:
+                        Intent intent14 = new Intent(context, Shooting.class);
+                        context.startActivity(intent14);
 
                         break;
 
@@ -171,11 +186,7 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder> 
 
                         break;
 
-                    case 14:
-                        Intent intent14 = new Intent(context, Shooting.class);
-                        context.startActivity(intent14);
 
-                        break;
                 }
 
             }

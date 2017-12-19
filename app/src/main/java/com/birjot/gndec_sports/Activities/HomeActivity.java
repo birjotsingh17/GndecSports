@@ -54,15 +54,7 @@ public class HomeActivity extends Progressdialog
         setSupportActionBar(toolbar);
 
         displaySelectedScreen(R.id.introduction);
-
-       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
+        setTitle("GNDECsports");
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -76,12 +68,6 @@ public class HomeActivity extends Progressdialog
 
     @Override
     public void onBackPressed() {
-       /* DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }*/
 
         if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
@@ -157,9 +143,9 @@ public class HomeActivity extends Progressdialog
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+       /* if (id == R.id.action_settings) {
             return true;
-        }
+        }*/
         if(id==R.id.action_RegistrtionForm)
         {
             Intent intent = new Intent(HomeActivity.this , RegistrationForm.class) ;
@@ -167,15 +153,15 @@ public class HomeActivity extends Progressdialog
             startActivity(intent);
             Toast.makeText(this, "Fill Registration Form Here ", Toast.LENGTH_SHORT).show();
         }
-        if (id == R.id.action_logout) {
+      /*  if (id == R.id.action_logout) {
 
-/*
+*//*
             showProgressDialog();
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(HomeActivity.this, SigninActivity.class));
             finish();
-            return true;*/
-        }
+            return true;*//*
+        }*/
 
 
         return super.onOptionsItemSelected(item);

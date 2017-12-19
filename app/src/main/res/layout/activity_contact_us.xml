@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
-    tools:context="com.birjot.gndec_sports.Activities.ContactUs">
 
+    tools:context="com.birjot.gndec_sports.Activities.ContactUs">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -201,4 +201,4 @@
             android:onClick="openmail"/>
 
     </LinearLayout>
-    </ScrollView>
+</ScrollView>

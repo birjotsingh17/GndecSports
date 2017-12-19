@@ -177,8 +177,9 @@
 
             <Button
                 android:text="submit"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/ButtonStyle"
                 android:layout_gravity="center"
                 android:id="@+id/buttonSubmit" />
 

@@ -67,27 +67,30 @@
                 android:layout_marginTop="20dp"
                 android:src="@drawable/swim"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/gym"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/black"
-                android:padding="5dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/gym2"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/black"
-                android:padding="5dp"/>
-
 
         </LinearLayout>
 
+        <WebView
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:id="@+id/swimweb"
+            android:layout_height="wrap_content">
+
+        </WebView>
 
         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="295dp"
+                android:src="@drawable/swimchargess"/>
+
+        </LinearLayout>
+
+        <!--<LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -131,7 +134,7 @@
 
             </LinearLayout>
 
-        </LinearLayout>
+        </LinearLayout>-->
     </LinearLayout>
 
 </ScrollView>

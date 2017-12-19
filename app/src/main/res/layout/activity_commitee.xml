@@ -4,58 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
-<LinearLayout
-    android:id="@+id/activity_commitee"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.birjot.gndec_sports.Activities.commitee"
-    android:weightSum="1">
-
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_commitee"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.birjot.gndec_sports.Activities.commitee">
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:textStyle="bold"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:background="@drawable/border"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:text="COMMITEE"/>
+        </LinearLayout>
 
-            android:textColor="@color/colorPrimary"
-            android:gravity="center"
-            android:layout_marginTop="8dp"
-            android:text="COMMITEE"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="197dp"
-        android:layout_marginTop="8dp"
-        app:srcCompat="@drawable/commitee1"
-        android:id="@+id/imageView8" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:orientation="vertical">
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="275dp"
-            android:layout_marginTop="8dp"
-            app:srcCompat="@drawable/commitee2"
-            android:id="@+id/imagedssView8" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="187dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/commitee1"
+                android:id="@+id/imageView8" />
 
-</LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="275dp"
+                app:srcCompat="@drawable/commitee2"
+                android:id="@+id/imagedssView8" />
+        </LinearLayout>
+        <!--
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>-->
+
+
+    </LinearLayout>
 </ScrollView>
